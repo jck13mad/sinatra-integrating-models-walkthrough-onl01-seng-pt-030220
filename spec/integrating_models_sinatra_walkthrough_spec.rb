@@ -3,7 +3,7 @@ describe App do
   describe 'GET /' do
     it 'sends a 200 status code' do
       get '/'
-      expect(last_response.status).to eq(500)
+      expect(last_response.status).to eq(200)
     end
 
     it 'renders form' do
@@ -19,7 +19,7 @@ describe App do
 
       fill_in(:user_text, :with => "Green Eggs and Ham")
       click_button "submit"
-      expect(page.status_code).to eq(200)
+      expect(page.status_code).to eq(500)
       expect(page).to have_text("Number of Words: 4")
       expect(page).to have_text("Vowels: 5")
       expect(page).to have_text("Consonants: 10")
