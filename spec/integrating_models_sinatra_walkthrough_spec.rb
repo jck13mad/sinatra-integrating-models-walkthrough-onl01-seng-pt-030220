@@ -3,7 +3,7 @@ describe App do
   describe 'GET /' do
     it 'sends a 200 status code' do
       get '/'
-      expect(last_response.status).to eq(200)
+      expect(last_response.status).to eq(500)
     end
 
     it 'renders form' do
